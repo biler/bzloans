@@ -24,6 +24,8 @@ namespace BzLoans
         private static void Bootstrap()
         {
             container = new Container();
+
+            container.Register<RepositoryInterface, SqlCustomerRepository>();
             container.Verify();
         }
     }
