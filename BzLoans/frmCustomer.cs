@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace BzLoans
 {
-    public partial class frmMain : Form
+    public partial class frmCustomer : Form
     {
-        public frmMain()
+        public frmCustomer()
         {
             InitializeComponent();
-        }
-
-        private void newCustomerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCustomer frm = new frmCustomer();
-            frm.MdiParent = this;
-            frm.Show();
         }
     }
 }
