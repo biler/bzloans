@@ -9,7 +9,7 @@ namespace BzLoans
 {
     static class Program
     {
-        private static Container container;
+        public static Container container;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
