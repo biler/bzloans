@@ -26,5 +26,10 @@ namespace BzLoans
 
 
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            Settings settings = new Settings();
+        }
     }
 }

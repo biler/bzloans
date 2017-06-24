@@ -18,6 +18,7 @@ namespace BzLoans
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Bootstrap();
             Application.Run(new frmMain());
         }
 
