@@ -29,7 +29,14 @@ namespace BzLoans
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            Settings settings = new Settings();
+
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSettings frm = new frmSettings();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

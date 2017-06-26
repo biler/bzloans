@@ -10,6 +10,7 @@ namespace BzLoans
     static class Program
     {
         public static Container container;
+        public static Settings settings;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -24,6 +25,8 @@ namespace BzLoans
 
         private static void Bootstrap()
         {
+            settings = new Settings();
+
             container = new Container();
 
             container.Register<RepositoryInterface, SqlCustomerRepository>();
