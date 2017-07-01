@@ -20,7 +20,7 @@ namespace BzLoans
             while (reader.Read())
             {
                 Customer customer = new Customer();
-                customer.name = (String) reader[0];
+                customer.Id = (Int32) reader[0];
                 output.Add(customer);
             }
             reader.Close();

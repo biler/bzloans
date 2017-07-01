@@ -8,6 +8,7 @@ namespace BzLoans
 {
     class Customer
     {
+        public Int32 Id { get; set; }
         public String name { get; set; }
     }
 }

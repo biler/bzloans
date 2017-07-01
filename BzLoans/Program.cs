@@ -23,6 +23,12 @@ namespace BzLoans
             Application.SetCompatibleTextRenderingDefault(false);
             Bootstrap();
             ConnectToDB();
+
+            SqlCustomerRepository repo = new SqlCustomerRepository();
+            List<Customer> customers = repo.All();
+
+            MessageBox.Show(customers.First().Id.ToString());
+
             Application.Run(new frmMain());
         }
 
@@ -34,6 +40,7 @@ namespace BzLoans
 
             container.Register<RepositoryInterface, SqlCustomerRepository>();
             container.Verify();
+
         }
 
         private static void ConnectToDB() {
