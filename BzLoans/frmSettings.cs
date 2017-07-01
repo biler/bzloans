@@ -30,6 +30,9 @@ namespace BzLoans
         private void frmSettings_Load(object sender, EventArgs e)
         {
             txtDBHost.Text = Program.settings.db_host;
+            txtDBName.Text = Program.settings.db_name;
+            txtDBUser.Text = Program.settings.db_username;
+            txtDBPassword.Text = Program.settings.db_password;
         }
     }
 }
