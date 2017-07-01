@@ -32,7 +32,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSaveDBSettings = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtDBPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.btnSaveDBSettings);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.txtDBPassword);
             this.tabPage3.Controls.Add(this.label4);
@@ -97,14 +97,15 @@
             this.tabPage3.Text = "Database";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSaveDBSettings
             // 
-            this.button2.Location = new System.Drawing.Point(248, 173);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSaveDBSettings.Location = new System.Drawing.Point(248, 173);
+            this.btnSaveDBSettings.Name = "btnSaveDBSettings";
+            this.btnSaveDBSettings.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveDBSettings.TabIndex = 9;
+            this.btnSaveDBSettings.Text = "Save";
+            this.btnSaveDBSettings.UseVisualStyleBackColor = true;
+            this.btnSaveDBSettings.Click += new System.EventHandler(this.btnSaveDBSettings_Click);
             // 
             // button1
             // 
@@ -206,7 +207,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDBHost;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSaveDBSettings;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtDBPassword;
         private System.Windows.Forms.Label label4;

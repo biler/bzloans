@@ -34,5 +34,16 @@ namespace BzLoans
             txtDBUser.Text = Program.settings.db_username;
             txtDBPassword.Text = Program.settings.db_password;
         }
+
+        private void btnSaveDBSettings_Click(object sender, EventArgs e)
+        {
+            Program.settings.db_host = txtDBHost.Text;
+            Program.settings.db_name = txtDBName.Text;
+            Program.settings.db_username = txtDBUser.Text;
+            Program.settings.db_password = txtDBPassword.Text;
+            Program.settings.Save();
+
+            MessageBox.Show("Database Settings has been saved");
+        }
     }
 }
