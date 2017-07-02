@@ -24,11 +24,6 @@ namespace BzLoans
             Bootstrap();
             ConnectToDB();
 
-            SqlCustomerRepository repo = new SqlCustomerRepository();
-            List<Customer> customers = repo.All();
-
-            MessageBox.Show(customers.First().Id.ToString());
-
             Application.Run(new frmMain());
         }
 

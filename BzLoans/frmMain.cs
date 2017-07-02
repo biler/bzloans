@@ -20,7 +20,7 @@ namespace BzLoans
         private void newCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RepositoryInterface repo = Program.container.GetInstance<SqlCustomerRepository>();
-            frmCustomer frm = new frmCustomer();
+            frmCustomers frm = new frmCustomers();
             frm.MdiParent = this;
             frm.Show();
 
@@ -35,6 +35,13 @@ namespace BzLoans
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmSettings frm = new frmSettings();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void allCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCustomers frm = new frmCustomers();
             frm.MdiParent = this;
             frm.Show();
         }
