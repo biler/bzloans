@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lvCustomers = new System.Windows.Forms.ListView();
-            this.columnHeaderTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.firstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.middleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,16 +42,16 @@
             this.columnHeaderEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderLandline = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvCustomers
             // 
+            this.lvCustomers.AllowColumnReorder = true;
+            this.lvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvCustomers.CheckBoxes = true;
             this.lvCustomers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderTitle,
             this.firstName,
             this.middleName,
             this.lastName,
@@ -68,16 +67,11 @@
             this.columnHeaderLandline});
             this.lvCustomers.FullRowSelect = true;
             this.lvCustomers.GridLines = true;
-            this.lvCustomers.Location = new System.Drawing.Point(12, 44);
+            this.lvCustomers.Location = new System.Drawing.Point(12, 12);
             this.lvCustomers.Name = "lvCustomers";
-            this.lvCustomers.Size = new System.Drawing.Size(789, 385);
+            this.lvCustomers.Size = new System.Drawing.Size(789, 417);
             this.lvCustomers.TabIndex = 0;
             this.lvCustomers.UseCompatibleStateImageBehavior = false;
-            // 
-            // columnHeaderTitle
-            // 
-            this.columnHeaderTitle.DisplayIndex = 3;
-            this.columnHeaderTitle.Text = "Title";
             // 
             // firstName
             // 
@@ -134,55 +128,22 @@
             // 
             this.columnHeaderLandline.Text = "Land-line";
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(651, 17);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(100, 20);
-            this.txtSearch.TabIndex = 1;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(752, 15);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(49, 23);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(12, 14);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 3;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            // 
             // frmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 441);
-            this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lvCustomers);
             this.Name = "frmCustomers";
             this.Text = "Customers";
             this.Load += new System.EventHandler(this.frmCustomers_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListView lvCustomers;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.ColumnHeader columnHeaderTitle;
         private System.Windows.Forms.ColumnHeader firstName;
         private System.Windows.Forms.ColumnHeader middleName;
         private System.Windows.Forms.ColumnHeader lastName;
