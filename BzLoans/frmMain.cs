@@ -19,12 +19,9 @@ namespace BzLoans
 
         private void newCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RepositoryInterface repo = Program.container.GetInstance<SqlCustomerRepository>();
-            frmCustomers frm = new frmCustomers();
+            frmNewCustomer frm = new frmNewCustomer();
             frm.MdiParent = this;
             frm.Show();
-
-
         }
 
         private void frmMain_Load(object sender, EventArgs e)
