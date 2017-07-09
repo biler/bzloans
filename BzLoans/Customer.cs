@@ -10,5 +10,6 @@ namespace BzLoans
     {
         public Int32 Id { get; set; }
         public String name { get; set; }
+        public CustomerProfile profile { get; set; }
     }
 }

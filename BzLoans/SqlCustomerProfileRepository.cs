@@ -44,5 +44,10 @@ namespace BzLoans
             reader.Close();
             return output;
         }
+
+        internal void AddProfile(CustomerProfile profile)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -12,9 +12,32 @@ namespace BzLoans
 {
     public partial class frmNewCustomer : Form
     {
+        private SqlCustomerProfileRepository Repository;
+
         public frmNewCustomer()
         {
             InitializeComponent();
+            Repository = new SqlCustomerProfileRepository();
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerProfile profile = new CustomerProfile();
+
+            profile.Address1 = txtAddress1.Text;
+            profile.Address2 = txtAddress2.Text;
+            profile.City = txtCity.Text;
+            profile.Birthdate = dtpBirthDate.Value;
+            profile.Country = txtCountry.Text;
+            profile.Email = txtEmail.Text;
+            profile.FirstName = txtFirstName.Text;
+            profile.MiddleName = txtMiddleName.Text;
+            profile.LastName = txtLastName.Text;
+            profile.Phone = txtPhone.Text;
+            profile.Telephone = txtTelephone.Text;
+            profile.State = txtState.Text;
+        
+            Repository.AddProfile(profile);
         }
     }
 }
