@@ -26,10 +26,5 @@ namespace BzLoans
             reader.Close();
             return output;
         }
-
-        public CustomerProfile AddProfile(CustomerProfile profile) {
-            
-            return profile;
-        }
     }
 }

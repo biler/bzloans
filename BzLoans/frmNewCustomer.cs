@@ -33,11 +33,17 @@ namespace BzLoans
             profile.FirstName = txtFirstName.Text;
             profile.MiddleName = txtMiddleName.Text;
             profile.LastName = txtLastName.Text;
+            profile.Title = txtTitle.Text;
             profile.Phone = txtPhone.Text;
             profile.Telephone = txtTelephone.Text;
             profile.State = txtState.Text;
         
             Repository.AddProfile(profile);
+        }
+
+        private void frmNewCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
