@@ -37,8 +37,9 @@ namespace BzLoans
             profile.Phone = txtPhone.Text;
             profile.Telephone = txtTelephone.Text;
             profile.State = txtState.Text;
+            profile.Zip = txtZipCode.Text;
         
-            Repository.AddProfile(profile);
+            Repository.Add(profile);
         }
 
         private void frmNewCustomer_Load(object sender, EventArgs e)

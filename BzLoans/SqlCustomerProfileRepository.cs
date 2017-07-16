@@ -34,7 +34,7 @@ namespace BzLoans
                 customer.City = reader["city"].ToString();
                 customer.State = reader["state"].ToString();
                 customer.Country = reader["country"].ToString();
-                customer.Zip = (Int32)reader["zip"];
+                customer.Zip = reader["zip"].ToString();
                 customer.Email = reader["email"].ToString();
                 customer.Phone = reader["phone_number"].ToString();
                 customer.Telephone = reader["tel_no"].ToString();
@@ -45,12 +45,12 @@ namespace BzLoans
             return output;
         }
 
-        public CustomerProfile AddProfile(CustomerProfile profile)
+        public CustomerProfile Add(CustomerProfile profile)
         {
             string query = "INSERT INTO main.customer_profiles (" 
-                + " first_name, middle_name, last_name, birthdate, title, address1, address2,city, state, country, zip, email, phone_number, tel_no  "
+                + " first_name, middle_name, last_name, birthdate, title, customer_id, address1, address2,city, state, country, zip, email, phone_number, tel_no  "
                 + ") VALUES (" 
-                + " @first_name, @middle_name, @last_name, @birthdate, @title, @address1, @address2, @city, @state, @country, @zip, @email, @phone_number, @tel_no" + ")";
+                + " @first_name, @middle_name, @last_name, @birthdate, @title, @customer_id, @address1, @address2, @city, @state, @country, @zip, @email, @phone_number, @tel_no" + ")";
 
 
             SqlCommand cmd = new SqlCommand( query, Program.Connection);
@@ -60,6 +60,7 @@ namespace BzLoans
             cmd.Parameters.Add("@last_name", SqlDbType.VarChar, 50).Value = profile.LastName;
             cmd.Parameters.Add("@birthdate", SqlDbType.DateTime).Value = profile.Birthdate;
             cmd.Parameters.Add("@title", SqlDbType.VarChar, 50).Value = profile.Title;
+            cmd.Parameters.Add("@customer_id",SqlDbType.Int).Value = 0;
             cmd.Parameters.Add("@address1", SqlDbType.VarChar, 50).Value = profile.Address1;
             cmd.Parameters.Add("@address2", SqlDbType.VarChar, 50).Value = profile.Address2;
             cmd.Parameters.Add("@city", SqlDbType.VarChar, 50).Value = profile.City;
