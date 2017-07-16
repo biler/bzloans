@@ -28,12 +28,17 @@ namespace BzLoans
         }
 
         private void populateCustomerListView() {
-            ListViewItem lvi = new ListViewItem("fname");
-            lvi.SubItems.Add("middle");
-            lvi.SubItems.Add("last");
-            lvCustomers.Items.Add(lvi);
+
+            foreach (CustomerProfile customer in customers) {
+                ListViewItem lvi = new ListViewItem(customer.FirstName);
+                lvi.SubItems.Add(customer.MiddleName);
+                lvi.SubItems.Add(customer.LastName);
+                lvCustomers.Items.Add(lvi);
+            }
+
             lvCustomers.View = View.Details;
             lvCustomers.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
         }
     }
 }
