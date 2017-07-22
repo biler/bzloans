@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimpleInjector;
 using System.Data.SqlClient;
+using LazyCache;
 
 namespace BzLoans
 {
@@ -13,6 +14,7 @@ namespace BzLoans
         public static Container container;
         public static Settings settings;
         public static SqlConnection Connection;
+        public static IAppCache Cache;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -35,6 +37,8 @@ namespace BzLoans
 
             container.Register<RepositoryInterface, SqlCustomerRepository>();
             container.Verify();
+
+            Cache = new CachingService();
 
         }
 
