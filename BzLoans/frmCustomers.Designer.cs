@@ -50,7 +50,6 @@
             this.lvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvCustomers.CheckBoxes = true;
             this.lvCustomers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.firstName,
             this.middleName,
@@ -69,23 +68,23 @@
             this.lvCustomers.GridLines = true;
             this.lvCustomers.Location = new System.Drawing.Point(12, 12);
             this.lvCustomers.Name = "lvCustomers";
+            this.lvCustomers.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lvCustomers.Size = new System.Drawing.Size(789, 417);
             this.lvCustomers.TabIndex = 0;
             this.lvCustomers.UseCompatibleStateImageBehavior = false;
+            this.lvCustomers.SelectedIndexChanged += new System.EventHandler(this.lvCustomers_SelectedIndexChanged);
+            this.lvCustomers.DoubleClick += new System.EventHandler(this.lvCustomers_DoubleClick);
             // 
             // firstName
             // 
-            this.firstName.DisplayIndex = 0;
             this.firstName.Text = "First Name";
             // 
             // middleName
             // 
-            this.middleName.DisplayIndex = 1;
             this.middleName.Text = "Middle Name";
             // 
             // lastName
             // 
-            this.lastName.DisplayIndex = 2;
             this.lastName.Text = "Last Name";
             // 
             // columnHeaderBday

@@ -40,5 +40,19 @@ namespace BzLoans
             lvCustomers.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
         }
+
+        private void lvCustomers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvCustomers_DoubleClick(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection items = lvCustomers.SelectedItems;
+
+            //int id = Convert.ToInt32(items[0].Text);
+
+            MessageBox.Show("value is" + items[0].Text);
+        }
     }
 }
