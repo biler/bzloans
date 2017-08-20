@@ -52,7 +52,11 @@ namespace BzLoans
 
             //int id = Convert.ToInt32(items[0].Text);
 
-            MessageBox.Show("value is" + items[0].Text);
+           // MessageBox.Show("value is" + items[0].Text);
+
+            frmEditCustomer frm = new frmEditCustomer();
+            frm.MdiParent = ParentForm;
+            frm.Show();
         }
     }
 }
